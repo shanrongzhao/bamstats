@@ -1,16 +1,15 @@
 version 1.0
 task bamstats {
-    input {
-        File bam_input
-        Int mem_gb
-    }
+  input {
+      File bam_input
+      Int mem_gb
+  }
 
-
-	command {
+  command {
 		bash /usr/local/bin/bamstats ${mem_gb} ${bam_input}
 	}
 
-	output {
+  output {
 		File bamstats_report = "bamstats_report.zip"
 	}
 
@@ -20,12 +19,12 @@ task bamstats {
 	}
 
 	meta {
-		author: "Andrew Duncan"
+		author: "Shanrong Zhao"
 	}
 }
 
 workflow bamstatsWorkflow {
-    input {
+  input {
         File bam_input
         Int mem_gb
     }
