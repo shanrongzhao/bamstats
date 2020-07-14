@@ -26,3 +26,5 @@ USER ubuntu
 
 # by default /bin/bash is executed
 CMD ["/bin/bash"]
+
+# nothing
